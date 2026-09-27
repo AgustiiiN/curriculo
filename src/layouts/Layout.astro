@@ -1,0 +1,76 @@
+---
+import "../styles/global.css";
+import {CV_DATA, type CV} from "../data/cv";
+
+export interface Props {
+    title: string;
+    description: string;
+    image?: string;
+    cv?: CV;
+    noindex?: boolean;
+}
+
+const {title, description, image = "/og-image.png", cv = CV_DATA, noindex = false} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = new URL(image, Astro.site);
+const imageAlt = `${cv.name} — ${cv.title}`;
+
+const [addressLocality = "", addressCountry = ""] = cv.location.split(",").map((part) => part.trim());
+
+const profileSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+        "@type": "Person",
+        "name": cv.name,
+        "jobTitle": cv.title,
+        "description": cv.about,
+        "url": cv.personalWebsiteUrl,
+        "email": `mailto:${cv.contact.email}`,
+        "telephone": cv.contact.tel,
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": addressLocality,
+            "addressCountry": addressCountry,
+        },
+        "alumniOf": cv.education.map((entry) => (
+            {"@type": "CollegeOrUniversity", "name": entry.school}
+        )),
+        "sameAs": cv.contact.social.map((social) => social.url),
+    },
+};
+---
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="generator" content={Astro.generator}/>
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff"/>
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#070312"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <link rel="sitemap" href="/sitemap-index.xml"/>
+    <title>{title}</title>
+    <meta name="description" content={description}/>
+    <link rel="canonical" href={canonicalURL.href} />
+    {noindex && <meta name="robots" content="noindex, nofollow"/>}
+
+    <meta property="og:title" content={title}/>
+    <meta property="og:description" content={description}/>
+    <meta property="og:url" content={canonicalURL}/>
+    <meta property="og:image" content={socialImageURL}/>
+    <meta property="og:image:alt" content={imageAlt}/>
+    <meta property="og:type" content="profile"/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content={title}/>
+    <meta name="twitter:description" content={description}/>
+    <meta name="twitter:image" content={socialImageURL}/>
+    <meta name="twitter:image:alt" content={imageAlt}/>
+
+    <script type="application/ld+json" set:html={JSON.stringify(profileSchema)}/>
+</head>
+<body>
+<slot/>
+</body>
+</html>
