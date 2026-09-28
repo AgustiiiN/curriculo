@@ -42,98 +42,80 @@ export interface Education {
 }
 
 export const CV_DATA: CV = {
-    name: "Dmitry Zhuk",
-    title: "Software Engineer",
-    location: "Minsk, Belarus",
-    locationLink: "https://www.google.com/maps/place/Minsk",
-    about: "Results-driven Software Engineer dedicated to building high-quality products.",
-    summary: `A Software Engineer specializing in developing high-performance, scalable projects using Java and 
-        Spring Boot. I have extensive experience building core functionalities for complex platforms in FinTech, iGaming, 
-        and healthcare.`,
-    personalWebsiteUrl: "https://dzhuk.com",
+    name: "Mateus Agustinho",
+    title: "Analista de Processos, automação e desenvolvimento",
+    location: "Brasília, Brasil",
+    locationLink: "https://www.google.com/maps/place/Distrito+Federal/",
+    about: "Analista de processos , integração SAP/Excel e eficiência de fluxos de trabalho.",
+    summary: `Bacharel em Administração com forte foco em automação de processos (RPA), otimização de rotinas fiscais e conciliação logística. Experiência na criação de soluções automatizadas e integração SAP-Excel, reduzindo o tempo de execução de tarefas, garantindo a conformidade e aumentando a acurácia de grandes volumes de dados.`,
+    personalWebsiteUrl: "https://site.com",
     contact: {
-        email: "dmitryzhuk98@gmail.com",
-        tel: "+375295559327",
+        email: "@gmail.com",
+        tel: "+5561",
         social: [
-            {name: "GitHub", url: "https://github.com/zhukdi"},
-            {name: "LinkedIn", url: "https://linkedin.com/in/zhukdi"},
+            { name: "LinkedIn", url: "https://linkedin.com/in/m-agustinho" },
+            { name: "GitHub", url: "https://github.com/AgustiiiN" },
         ],
     },
     work: [
         {
-            company: "Dzengi.com",
-            link: "https://www.linkedin.com/company/dzengicom/",
-            title: "Java Software Engineer",
-            start: "May 2024",
-            end: "Present",
-            description: "Develop and maintain backend microservices for a high-performance, multi-asset trading platform.",
+            company: "Projeto Pessoal / Empreendimento",
+            link: "https://seusite.com",
+            title: "Fundador & Desenvolvedor",
+            start: "Jun 2026",
+            end: "Presente",
+            description: "Arquitetura, modelagem e desenvolvimento de websites.",
             achievements: [
-                "Engineer scalable microservices with Java 21 and Spring Boot for user management, trade execution, and onboarding.",
-                "Implement an event-driven architecture with Kafka for reliable, real-time data processing between services.",
-                "Develop secure RESTful APIs using the OpenAPI standard for frontend and internal system integration.",
-                "Manage PostgreSQL schema evolution and data integrity using Liquibase for database migrations.",
-                "Monitor system performance and health using Grafana and OpenSearch to ensure high availability."
+                "Planejamento de negócios, arquitetura de conteúdo e estratégia de monetização/crescimento do portal.",
+                "Implementação e manutenção da plataforma web utilizando tecnologias modernas e integração de ferramentas.",
+                "Automação de rotinas de publicação, gestão de dados de acessos e otimização do fluxo de trabalho."
             ],
-            badges: ["Java 21", "Spring Boot", "Kafka", "Redis", "PostgreSQL", "Liquibase", "JUnit", "Mockito", "Testcontainers", "AWS",
-                "Docker", "REST", "OpenAPI", "Grafana", "OpenSearch", "k6"],
+            badges: ["Astro", "Tailwind", "Git", ""],
         },
         {
-            company: "Wisercat, CATCO Technologies",
-            link: "https://www.linkedin.com/company/catco-tech",
-            title: "Full Stack Engineer",
-            start: "December 2022",
-            end: "April 2024",
-            description: "Contributed to the development of a high-intensity, B2B gambling platform built on a microservice architecture.",
+            company: "Atento (Operação VIVO)",
+            link: "https://www.linkedin.com/company/atento/",
+            title: "Analista de Logística",
+            start: "Set 2025",
+            end: "Presente",
+            description: "Atuação na gestão, conciliação e validação de faturas de transporte e armazenagem para contratos logísticos de grande porte.",
             achievements: [
-                "Developed and maintained scalable backend microservices using Java 11 and Spring Boot to support core gaming and business logic.",
-                "Engineered high-performance data solutions using Apache Ignite / GridGain as an In-Memory Data Platform",
-                "Built real-time, interactive features for live gaming events by implementing WebSockets with the STOMP protocol.",
-                "Designed and implemented RESTful APIs to facilitate seamless integration with third-party gaming services and internal clients."
+                "Desenvolvimento de scripts de automação, otimizando o fluxo diário e reduzindo expressivamente o tempo de conferência.",
+                "Validação rigorosa e auditoria de faturas de transporte e armazenagem em conformidade com as regras operacionais da Vivo.",
+                "Manipulação e modelagem de grandes volumes de dados no Excel avançado com foco na identificação de divergências financeiras e operacionais."
             ],
-            badges: ["Java 11", "Spring Boot", "WebSockets", "STOMP", "GridGain", "Apache Ignite", "Angular",
-                "TypeScript", "AWS", "Docker"],
+            badges: ["Análise de Dados","Auditoria de Custos","Excel", "VBScript", "SAP"],
         },
         {
-            company: "EffectiveSoft",
-            link: "https://www.linkedin.com/company/effectivesoft",
-            title: "Java Software Engineer",
-            start: "August 2021",
-            end: "November 2022",
-            description: `Developed solutions for diverse projects, including a healthcare cloud-sync feature, a GIS 
-                visualization platform, and an internal automation tool.`,
+            company: "Atento (Operação VIVO)",
+            link: "https://www.linkedin.com/company/atento/",
+            title: "Analista Fiscal",
+            start: "Mai 2024",
+            end: "Ago 2025",
+            description: "Responsável pelo processamento de reversas e gestão fiscal.",
             achievements: [
-                "Built and maintained backend services for enterprise web apps using Java and Spring.",
-                "Implemented cloud-native features using AWS services like Lambda, S3, IoT and KMS.",
-                "Managed relational (PostgreSQL, MySQL, SQLite) and NoSQL (DynamoDB) databases, using Liquibase for schema evolution.",
-                "Ensured application quality with comprehensive unit and integration testing using JUnit, Spock, and Testcontainers."
+                "Automação de rotinas fiscais repetitivas integrando dados do SAP diretamente com planilhas Excel via VBA.",
+                "Processamento e gestão de reversas operacionais e transferências MBI na região Centro-Oeste no ERP SAP.",
+                "Monitoramento diário, auditoria e correção de inconsistências operacionais e emissão de notas fiscais (Monitor NF-e e CC-e)."
             ],
-            badges: ["Java 11", "Spring Boot", "AWS", "PostgreSQL", "SQLite", "JUnit", "Spock", "Testcontainers"],
-        },
-        {
-            company: "IBA Group",
-            link: "https://www.linkedin.com/company/iba-group",
-            title: "Java Software Engineer",
-            start: "December 2017",
-            end: "July 2021",
-            description: "Developed and maintained a full-stack enterprise billing and subscriber management system within the telecommunications industry.",
-            achievements: [
-                "Engineered and implemented RESTful APIs and backend business logic using a Java EE stack, including EJB, JAX-RS, and Hibernate",
-                "Built and enhanced responsive, user interfaces using modern frameworks like Angular and component libraries such as Primefaces."
-            ],
-            badges: ["Java 8", "EJB", "JAX-RS", "Hibernate", "Maven", "Wildfly", "Jaspersoft", "Oracle", "Angular",
-                "Primefaces", "UIkit"],
+            badges: ["SAP", "VBA", "Monitor NF-e", "Automação Fiscal"],
         }
     ],
     education: [
         {
-            school: "Belarusian State University",
-            degree: "Bachelor's degree, Mathematics and information technologies",
-            start: "2015",
-            end: "2019",
+            school: "Centro Universitário IESB",
+            degree: "Bacharelado em Administração de Empresas",
+            start: "2018",
+            end: "2023",
         },
     ],
     skills: [
-        "Java (8, 11, 21)", "Spring Boot", "Hibernate", "Kafka", "Maven", "AWS", "Angular", "SQL", "PostgreSQL", "Docker",
-        "JUnit", "Mockito", "REST"
+        "Automação (RPA)",
+        "SAP ERP",
+        "VBA",
+        "Excel",
+        "Análise de Dados",
+        "Logica de programação",
+        "Astro"
     ],
 };

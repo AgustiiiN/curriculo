@@ -10,7 +10,7 @@ const {cv = CV_DATA} = Astro.props;
 const {education} = cv;
 ---
 <section class="flex min-h-0 flex-col gap-y-3 print:gap-y-1">
-    <h2 class="text-xl font-bold" id="education-section">Education</h2>
+    <h2 class="text-xl font-bold" id="education-section">Educação</h2>
     <div class="space-y-4">
         {education.map((entry) => (
                 <EducationItem {...entry}/>
